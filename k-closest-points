@@ -1,0 +1,15 @@
+class Solution(object):
+    def kClosest(self, points, k):
+        """
+        :type points: List[List[int]]
+        :type k: int
+        :rtype: List[List[int]]
+        """
+        dictt={}
+        for point in points:
+            dist=pow(pow(point[0],2)+pow(point[1],2),0.5)
+            dictt[dist]=point
+        sorted_dict=sorted(dictt.items())
+        sorted_dict=dict(sorted_dict)
+        closest_points=sorted_dict.values()[:k]
+        return closest_points

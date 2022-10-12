@@ -11,5 +11,5 @@ class Solution(object):
             dictt[dist]=point
         sorted_dict=sorted(dictt.items())
         sorted_dict=dict(sorted_dict)
-        closest_points=sorted_dict.values()[:k]
+        closest_points=list(sorted_dict.values())[:k]
         return closest_points
